@@ -16,11 +16,22 @@ export default function Home() {
       <section className="container mx-auto px-4 pt-24 pb-20">
         <div className="max-w-[800px] mx-auto text-center">
           <h1 className="text-5xl font-bold tracking-tight lg:text-6xl">
-            Template Starter
+            Welcome to Your App
           </h1>
           <p className="mt-6 text-xl text-muted-foreground max-w-[600px] mx-auto">
-            This is a customizable template. Replace all content with your own using the chat interface.
+            Build something amazing with this modern, customizable template. Get started by exploring the features below.
           </p>
+          <div className="mt-8">
+            <Button 
+              size="lg" 
+              onClick={() => toast({
+                title: "Welcome!",
+                description: "Thanks for checking out this template.",
+              })}
+            >
+              Get Started
+            </Button>
+          </div>
         </div>
       </section>
     </div>
