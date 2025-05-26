@@ -1,5 +1,5 @@
 
-# Workflow Version: 1.1.1
+# Workflow Version: 1.1.2
 name: Deploy to Cloudflare Workers
 
 on:
@@ -18,13 +18,13 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v1
         with:
-          node-version: 20
+          bun-version: latest
 
       - name: Install dependencies
-        run: bun ci
+        run: bun install
 
       - name: Update wrangler.toml with dynamic name
         run: |
